@@ -1,0 +1,9 @@
+#!/bin/bash
+#extracting top 10 high temperature
+cat raw_data/satelite_temperature_data.csv | sort -t 3 -nr | head -n 10 > analyzed_data/highest_temp.csv
+
+#extracting humidity from chosen country
+
+grep Kenya raw_data/satelite_temperature_data.csv |sort -t 4 -nr > analyzed_data/humidity_data/humidity_data_Kenya.csv
+
+
